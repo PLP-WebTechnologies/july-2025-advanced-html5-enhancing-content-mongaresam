@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<lang="en">
+    <head>
+        <meta name="description" content="assignment page">
+        <meta charset="UTF-8">
+        <meta name="keywords" content="my profile displaying advanced HTML5 features">
+        <meta name="author" content="instructor Eddy">
+        <title>Week 2 Assignment</title>
+    </head>
+    <body>
+        <header>
+            <h1>Week 2 Assignment</h1>
+            <p>This is my week 2 assignment about Enhancing Content with Advanced HTML5 Features.welcome to my profile and enjoy your viewing .Don't forget to come back again</p>
+            <p>Submitted and Done by: Samuel Mong'are Oenga</p>
+            <nav>
+                <ul>
+                    <li><a href="week2ass.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section id="list of my family and friends">
+                <h2>My Friends & Family (Nested List)</h2>
+                <p>Here is a nested list grouping my close friends and family by relationship:</p>
+                <ul>
+                    <li>Family
+                        <ul>
+                            <li>Precious Mong'are (Wife and Lover)</li>
+                            <li>Paul Morondo (Brother)</li>
+                            <li>Esther Bwari (Sister)</li>
+                            <li>Jared Oenga (Father)</li>
+                        </ul>
+                    </li>
+                    <li>Friends
+                        <ul>
+                            <li>Gerald Bruno</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+            <selection id="image">
+                <h2>Image</h2>
+                <p>This is my image with my friends and peers:</p>
+                <img src="image.jpg" alt="My Image" width="300" height="200">
+            </selection>
+                
+            <section id="table">
+                <h2>Table</h2>
+                <p>this is table showing my family and close friends details on it.It is not detailed so much  </p>
+                <table border="1" cellpadding="5" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>age</th>
+                            <th>Gender</th>
+                            <th>Country</th>
+                            <th>Relationship</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Precious Mong'are</td>
+                            <td>19</td>
+                            <td>female</td>
+                            <td>Europe</td>
+                            <td>wife and lover</td>
+                        </tr>   
+                        <tr>
+                            <td>Gerald Bruno</td>
+                            <td>20</td>
+                            <td>male</td>
+                            <td>USA</td>
+                            <td>friend</td>
+                        </tr>
+                        <tr>
+                            <td>Jared Oenga</td>
+                            <td>54</td>
+                            <td>male</td>   
+                            <td>Kenya</td>  
+                            <td>father</td>
+                        </tr>   
+                        <tr>
+                            <td>Paul Morondo</td>
+                            <td>25</td>
+                            <td>Male</td>
+                            <td>Canada</td>
+                            <td>brother</td>
+                        </tr>
+                        <tr>
+                            <td>Esther Bwari</td>
+                            <td>22</td>
+                            <td>female</td>
+                            <td>Kenya</td>
+                            <td>sister</td>
+                        </tr>
+                    </tbody>
+                    </table>
+                    </section>  
+            <section id="video">
+
+            </section>
+            <h2>video in the site</h2>
+            <p>this is a video embedded in the site.Its a random video but hopeful you will enjoy it.</p>
+            <video width="500" height="300" controls>
+                <source src="SEE_Day_6_Session3.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            </section>
+            <section id="audio">
+                <h2>Audio</h2>
+                <p>This is an audio file embedded in the site. It is a random song i love so much it gat also some memories i love.I hope you will enjoy it.</p>
+                <audio controls>
+                    <source src="Fave_-_Mr_Man__Visualizer_(256k).mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </section>
+            <section id="Forms">
+                <h2>Forms</h2>
+                <p>This is a form that allows users to submit their details to contact me if anything is possible. It includes fields for name, email, and message.</p>
+                <form id="contactForm" action="#" method="post">
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name" name="name" required><br>
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" required><br>
+                    <label for="gender">Gender:</label>
+                    <input type="radio" name="gender" value="male"> Male:</label>
+                    <input type="radio" name="gender" value="female">female:</label>
+                    <input type="radio" name="other" value="other">Other:</label>
+                    <br /><br />
+                    <label for="update CV">Update CV:</label>
+                     <input type="file" name="cv" id="cv" accept=".pdf,.doc,.docx">
+                    <label for="message">Message (minimum 200 words):</label><br>
+                    <textarea id="message" name="message" rows="8" cols="50" required></textarea><br>
+                    <span id="wordCountMsg" style="color:red;"></span>
+                    <br>
+                    <input type="submit" value="Submit">
+                </form>
+                <script>
+                document.getElementById('contactForm').addEventListener('submit', function(e) {
+                    var message = document.getElementById('message').value.trim();
+                    var wordCount = message.split(/\s+/).filter(function(word) { return word.length > 0; }).length;
+                    if (wordCount < 200) {
+                        document.getElementById('wordCountMsg').textContent = 'Please enter at least 200 words in your message. Currently: ' + wordCount + ' words.';
+                        e.preventDefault();
+                    } else {
+                        document.getElementById('wordCountMsg').textContent = '';
+                    }
+                });
+                </script>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2025 Samuel Mong'are Oenga. All rights reserved.</p>
+            <p>Contact: <a href="mailto:0742132276">0742132276</a></p>
+            <p>Follow me on <a href="https://www.instagram.com/_.mongare_?igsh=MTZkZW1qNDN3MngycA==">Instagram</a></p>
+            <p>Follow me on <a href=https://x.com/samido_M?t=Ee3GMuzTOyShKhNNhMHtgQ&s=08>Twitter</a></p>
+        </footer>
+        </section>
+    
+    </body>
